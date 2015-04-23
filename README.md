@@ -12,8 +12,8 @@ run `gradle tasks` to list all tasks for gradle
 
 Build instructions:
 ------------------------------------------------------------------------------
-`gradle clean build`
+`./gradlew clean build`
 
 Run instructions:
 ------------------------------------------------------------------------------
-test will run during build but can be ran manually with `gradle test`
+test will run during build but can be ran manually with `./gradlew test`
