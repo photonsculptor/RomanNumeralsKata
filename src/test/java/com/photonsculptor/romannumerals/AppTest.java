@@ -7,8 +7,7 @@ import com.photonsculptor.roamnnumerals.App;
 
 import static org.junit.Assert.assertEquals;
 
-public class AppTest
-{
+public class AppTest {
     private App app;
 
     @Before
@@ -17,9 +16,14 @@ public class AppTest
     }
 
     @Test
-    public void whenOneEnteredIReturned()
-    {
+    public void whenOneEnteredIReturned() {
     	String result = app.convertToRoman(1);
     	assertEquals(result, "I");
+    }
+    
+    @Test
+    public void whenTwoEnteredIIReturned() {
+    	String result = app.convertToRoman(2);
+    	assertEquals(result, "II");
     }
 }
