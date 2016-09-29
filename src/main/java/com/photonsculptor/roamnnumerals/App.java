@@ -1,12 +1,12 @@
 package com.photonsculptor.roamnnumerals;
 
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public class App {
 
 	public String convertToRoman(int arabic) {
-		if (arabic == 1) {
-			return "I";
-		} else {
-			return "II";
-		}	
+		String roman = Stream.generate(() -> "I").limit(arabic).collect(Collectors.joining());
+		return roman;		
     }
 }
