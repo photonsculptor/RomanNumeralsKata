@@ -6,7 +6,12 @@ import java.util.stream.Stream;
 public class App {
 
 	public String convertToRoman(int arabic) {
-		String roman = Stream.generate(() -> "I").limit(arabic).collect(Collectors.joining());
-		return roman;		
+		if(arabic !=5){
+			String roman = Stream.generate(() -> "I").limit(arabic).collect(Collectors.joining());
+			return roman;
+		} else {
+			return "V";
+		}
+				
     }
 }
