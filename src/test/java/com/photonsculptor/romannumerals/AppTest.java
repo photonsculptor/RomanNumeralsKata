@@ -1,7 +1,9 @@
-package com.pillar.app;
+package com.photonsculptor.romannumerals;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import com.photonsculptor.roamnnumerals.App;
 
 import static org.junit.Assert.assertEquals;
 
@@ -15,8 +17,9 @@ public class AppTest
     }
 
     @Test
-    public void whenTheGreetingIsRequestedThenTheAppGreetsTheWorld()
+    public void whenOneEnteredIReturned()
     {
-        assertEquals( "Hello World!", app.getGreeting());
+    	String result = app.convertToRoman(1);
+    	assertEquals(result, "I");
     }
 }
