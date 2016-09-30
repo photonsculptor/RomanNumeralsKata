@@ -44,4 +44,10 @@ public class AppTest {
     	String result = app.convertToRoman(10);
     	assertEquals(result, "X");
     }
+    
+    @Test
+    public void whenTwentyEnteredXXReturned() {
+    	String result = app.convertToRoman(20);
+    	assertEquals(result, "XX");
+    }
 }
