@@ -51,5 +51,11 @@ public class AppTest {
     	assertEquals(result, "XX");
     }
     
+    @Test
+    public void whenEightEnteredVIIIReturned() {
+    	String result = app.convertToRoman(8);
+    	assertEquals(result, "VIII");
+    }
     
+
 }
