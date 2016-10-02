@@ -110,4 +110,16 @@ public class AppTest {
     	String result = app.convertToRoman(1000);
     	assertEquals(result, "M");
     }
+    
+    @Test
+    public void when1066EnteredMLXVIReturned() {
+    	String result = app.convertToRoman(1066);
+    	assertEquals(result, "MLXVI");
+    }
+    
+    @Test
+    public void when1989EnteredMCMLXXXIXReturned() {
+    	String result = app.convertToRoman(1989);
+    	assertEquals(result, "MCMLXXXIX");
+    }
 }
