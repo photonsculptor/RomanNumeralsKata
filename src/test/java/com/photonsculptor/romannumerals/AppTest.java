@@ -124,8 +124,9 @@ public class AppTest {
     }
     
     @Test
-    public void whenIEntered1Returned() {
-    	int result = app.convertToArabic("I");
-    	assertEquals(result, 1);
+    public void whenIIEntered2Returned() {
+    	int result = app.convertToArabic("II");
+    	assertEquals(result, 2);
     }
+    
 }

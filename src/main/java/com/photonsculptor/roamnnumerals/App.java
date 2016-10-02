@@ -55,7 +55,6 @@ public class App {
 	
 	
 	public int convertToArabic(String string) {
-		
-		return 1;
+		return (int) string.length();
 	}
 }
