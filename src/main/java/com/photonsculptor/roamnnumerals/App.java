@@ -18,6 +18,7 @@ public class App {
 	public String convertToRoman(int arabic) {
 		StringBuilder roman = new StringBuilder();
 		
+		arabic = appendRomanNumeral(arabic, new Number(500, "D"), roman);
 		arabic = appendRomanNumeral(arabic, new Number(100, "C"), roman);
 		arabic = appendRomanNumeral(arabic, new Number(90, "XC"), roman);
 		arabic = appendRomanNumeral(arabic, new Number(50, "L"), roman);

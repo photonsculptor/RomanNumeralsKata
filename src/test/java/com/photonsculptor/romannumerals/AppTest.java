@@ -92,4 +92,10 @@ public class AppTest {
     	String result = app.convertToRoman(9);
     	assertEquals(result, "IX");
     }
+    
+    @Test
+    public void when500EnteredDReturned() {
+    	String result = app.convertToRoman(500);
+    	assertEquals(result, "D");
+    }
 }
