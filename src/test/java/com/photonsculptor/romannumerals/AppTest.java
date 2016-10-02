@@ -122,4 +122,10 @@ public class AppTest {
     	String result = app.convertToRoman(1989);
     	assertEquals(result, "MCMLXXXIX");
     }
+    
+    @Test
+    public void whenIEntered1Returned() {
+    	int result = app.convertToArabic("I");
+    	assertEquals(result, 1);
+    }
 }

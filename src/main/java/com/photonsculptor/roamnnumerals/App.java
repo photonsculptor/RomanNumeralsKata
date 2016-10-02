@@ -9,7 +9,7 @@ public class App {
 		public int arabicNum;
 		public String romanNum;
 		
-		Number (int arabicNum, String romanNum) {
+		Number(int arabicNum, String romanNum) {
 			this.arabicNum = arabicNum;
 			this.romanNum = romanNum;
 		}
@@ -38,7 +38,7 @@ public class App {
     }
 
 	private int appendRomanNumeral(int arabic, Number numToAppend, StringBuilder roman) {
-		if (arabic >= numToAppend.arabicNum) {
+		if(arabic >= numToAppend.arabicNum) {
 			int numRepeats = arabic / numToAppend.arabicNum;
 			roman.append(romanLetters(numRepeats, numToAppend.romanNum));
 			return arabic % numToAppend.arabicNum;
@@ -50,5 +50,12 @@ public class App {
 
 	private String romanLetters(int arabic, String letter) {
 		return Stream.generate(() -> letter).limit(arabic).collect(Collectors.joining());
+	}
+
+	
+	
+	public int convertToArabic(String string) {
+		
+		return 1;
 	}
 }
