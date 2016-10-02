@@ -99,5 +99,15 @@ public class AppTest {
     	assertEquals(result, "CD");
     }
   
-
+    @Test
+    public void when900EnteredCMReturned() {
+    	String result = app.convertToRoman(900);
+    	assertEquals(result, "CM");
+    }
+    
+    @Test
+    public void when1000EnteredMReturned() {
+    	String result = app.convertToRoman(1000);
+    	assertEquals(result, "M");
+    }
 }
