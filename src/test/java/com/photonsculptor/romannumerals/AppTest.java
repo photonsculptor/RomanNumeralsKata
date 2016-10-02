@@ -129,4 +129,10 @@ public class AppTest {
     	assertEquals(result, 2);
     }
     
+    @Test
+    public void whenVEntered5Returned() {
+    	int result = app.convertToArabic("V");
+    	assertEquals(result, 5);
+    }
+    
 }

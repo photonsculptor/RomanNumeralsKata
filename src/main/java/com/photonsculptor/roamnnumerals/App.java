@@ -55,6 +55,17 @@ public class App {
 	
 	
 	public int convertToArabic(String string) {
-		return (int) string.length();
+		char[] roman = string.toCharArray();
+		int arabic = 0;
+		
+		for(char i : roman) {
+			if(i == 'V') {
+					arabic += 5;
+			} else {
+				arabic ++;
+			}	
+		}
+		
+		return arabic;
 	}
 }
