@@ -57,5 +57,39 @@ public class AppTest {
     	assertEquals(result, "VIII");
     }
     
+    @Test
+    public void whenSixteenEnteredXVIReturned() {
+    	String result = app.convertToRoman(16);
+    	assertEquals(result, "XVI");
+    }
 
+    @Test
+    public void whenTwentyeightEnteredXXVIIIReturned() {
+    	String result = app.convertToRoman(28);
+    	assertEquals(result, "XXVIII");
+    }
+    
+    @Test
+    public void whenFourEnteredIVReturned() {
+    	String result = app.convertToRoman(4);
+    	assertEquals(result, "IV");
+    }
+    
+    @Test
+    public void when200EnteredCCReturned() {
+    	String result = app.convertToRoman(200);
+    	assertEquals(result, "CC");
+    }
+    
+    @Test
+    public void when47EnteredXLVIIReturned() {
+    	String result = app.convertToRoman(47);
+    	assertEquals(result, "XLVII");
+    }
+    
+    @Test
+    public void when9EnteredIXReturned() {
+    	String result = app.convertToRoman(9);
+    	assertEquals(result, "IX");
+    }
 }
