@@ -56,16 +56,40 @@ public class App {
 	
 	public int convertToArabic(String string) {
 		char[] roman = string.toCharArray();
-		int arabic = 0;
+		int romanLength = roman.length;
+		int[] arabic = new int[romanLength];
+		int arabicTotal = 0;
 		
-		for(char i : roman) {
-			if(i == 'V') {
-					arabic += 5;
+		//convert letters to numbers
+		for(int i = 0; i < romanLength; i++) {
+			if (roman[i] == 'M') {
+				arabic[i] = 1000;
+			} else if (roman[i] == 'D') {
+				arabic[i] = 500;
+			} else if (roman[i] == 'C') {
+				arabic[i] = 100;
+			} else if (roman[i] == 'L') {
+				arabic[i] = 50;
+			} else if (roman[i] == 'X') {
+				arabic[i] = 10;
+			} else if (roman[i] == 'V') {
+				arabic[i] = 5;
+			} else if (roman[i] == 'I') {
+				arabic[i] = 1;
 			} else {
-				arabic ++;
-			}	
+				arabic[i] = 0;
+			}
 		}
 		
-		return arabic;
+		//add or subtract numbers to total based on ordering
+		for (int i = 0; i < romanLength; i++) {
+			if (i < (romanLength - 1) && arabic[i] < arabic[i + 1]) {
+				arabicTotal -= arabic[i];
+			} else {
+				arabicTotal += arabic[i];
+			}
+		}
+		
+		return arabicTotal;
 	}
 }
