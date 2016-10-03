@@ -141,4 +141,27 @@ public class AppTest {
     	assertEquals(result, 4);
     }
     
+    @Test
+    public void whenIIIEntered3Returned() {
+    	int result = app.convertToArabic("III");
+    	assertEquals(result, 3);
+    }
+    
+    @Test
+    public void whenIXEntered9Returned() {
+    	int result = app.convertToArabic("IX");
+    	assertEquals(result, 9);
+    }
+    
+    @Test
+    public void whenMLXVIEntered1066Returned() {
+    	int result = app.convertToArabic("MLXVI");
+    	assertEquals(result, 1066);
+    }
+    
+    @Test
+    public void whenMCMLXXXIXEntered1989Returned() {
+    	int result = app.convertToArabic("MCMLXXXIX");
+    	assertEquals(result, 1989);
+    }
 }
